@@ -1,0 +1,101 @@
+.ImageDiv{
+    background-image: url('../../assets/img/Background.png'); /* Caminho da imagem */
+  background-size: cover; /* Cobrir toda a div */
+  background-position: center; /* Centralizar a imagem */
+  background-repeat: no-repeat; /* Evitar repetição da imagem */
+  width: 100vw; /* Largura da div */
+  height: 100vh; /* Altura da div (100% da viewport) */
+  border: 1px solid white; /* Borda para visualização */
+}
+.link{
+    text-decoration: none;
+    color: #676464;
+}
+
+.ContentDiv{
+    
+    margin-top: 30%;
+    
+}
+
+.LogandSign{
+    display: flex;
+    flex-direction: row;
+    
+    margin-left: 60%;
+    gap: 5%;
+}
+
+.inputsDiv{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 25px;
+}
+
+.inputStyle{
+    width: 90vw;
+    height: 5vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: white;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25); /* Sombra externa */
+}
+
+.inputStyle::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+#vetorUp{
+    width: 100vw;
+}
+
+#vetorDown{
+    width: 100vw;
+    
+}
+
+#Login1{
+    font-size: 20px;
+    color: #C4E0F8;
+    
+}
+
+#Login2{
+    font-size: 20px;
+    color: #C4E0F8;
+    margin-bottom: 10%;
+    margin-left: 4%;
+}
+
+#SignUp{
+    font-size: 20px;
+}
+
+#cashPig{
+    width: 45vw;
+    height: 22vh;
+    margin-left: 30%;
+}
+
+#EntrarBtn{
+    width: 95vw;
+    height: 7vh;
+    background-image: linear-gradient(to right, #B9DBF1, #93C7D6); /* Gradiente linear */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-image 0.3s ease; /* Transição suave */
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 10px 20px rgba(68, 158, 182, 0.42); /* Sombra externa */
+}

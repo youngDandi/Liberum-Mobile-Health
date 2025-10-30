@@ -1,0 +1,261 @@
+.FullScreenHome{
+    background-color: #C4E0F8;
+    width: 100vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+  border: 1px solid #C4E0F8;
+}
+
+.link{
+
+    text-decoration: none;
+}
+.UsernameDiv{
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-left: 2.5%;
+
+}
+
+.UserandCard{
+    display: flex;
+    flex-direction: row;
+    margin-right: 3%;
+    gap: 25%;
+}
+
+.UserandMessage{
+    
+    
+}
+
+#message{
+    
+    margin-top: -12%;
+    margin-left: 3%;
+    font-size: 15px;
+    color: #7A91A3;
+}
+
+.CardandTextDiv{
+    margin-top: 8%;
+    
+    border-radius: 30px 30px 30px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+    width: 27vw;
+    height: 6vh;
+    background-color: white;
+}
+
+.cardDiv{
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: #12181E;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-left: 5%;
+    width: 8vw;
+    height: 3vh;
+}
+
+#card{
+    margin-bottom: 5%;
+}
+
+#Username{
+    font-size: 19px;
+}
+
+#Ola{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+
+.MenuandTextDiv{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    gap: 5%;
+    padding-left: 4%;
+    background-color: white;
+    width: 38%;
+}
+
+
+
+.MenuDiv{
+    background-color: #C4E0F8;
+    border-radius: 50%;
+    width: 8vw;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.Separation{
+    
+    
+    background-color: white;
+    height: 5vh;
+    margin-top: 2%;
+}
+
+.MenuButtonsDiv{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    
+}
+
+.MenuButtonsDiv1{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.DivUp{
+    border: 1px solid white;
+    border-radius: 0px 0px 50px 50px;
+}
+
+.DivDown{
+    border: 1px solid white;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.divDesign {
+    width: 20px;
+    height: 70px;
+    background-color: #C4E0F8;
+    color: #C4E0F8;
+    
+}
+
+.OrderandDay{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60%;
+    margin-left: 2.5%;
+}
+
+.DayandArrow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+#balance{
+    margin-left: 2.5%;
+}
+
+#money{
+    margin-left: 21.5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+
+
+.OrdersItemDiv{
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    gap: 5%;
+    padding-left: 4%;
+    background-color: white;
+    width: 22%;
+    height: 5vh;
+}
+
+.itemDiv{
+    background-color: #C4E0F8;
+    border-radius: 50%;
+    width: 6vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.Orderlist{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+#OrderName{
+    font-size: 14px;
+}
+
+.plusDiv{
+    border-radius: 50%;
+    height: 5vh;
+    width: 10%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid white;
+    background-color: #12181E;
+    margin-left: 2%;
+}
+
+#plusIcon{
+    color: white;
+}
+
+#Investments{
+    margin-left: 2%;
+}
+
+.InvestimentslistDiv{
+    display: flex;
+    margin-left: 8%;
+    gap: 6%;
+}
+
+.InvestmentsItemDiv{
+    border: 1px solid white;
+    
+    align-items: center;
+    border-radius: 15px 15px 15px 15px;
+    
+    padding-left: 4%;
+    background-color: white;
+    width: 38%;
+    height: 13vh;
+}
+
+.itemDivInv{
+    background-color: #C4E0F8;
+    border-radius: 50%;
+    width: 6vw;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 4%;
+}
+
+#OrderNameI{
+    font-size: 14px;
+    
+    overflow: hidden; /* Evita que o texto seja cortado */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+}

@@ -1,0 +1,217 @@
+.FullScreenStockProduct{
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.HeaderStockProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+.goBackDivStockProduct{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivStockProduct{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+
+}
+
+#activeLogoStockProduct{
+    color: white;
+}
+
+.activeLogoDivStockProduct{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 8vh;
+    
+}
+
+.activeNameDivStockProduct{
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+}
+
+#activeNameStockProduct{
+    margin-left: 9%;
+    font-size: 25px;
+    
+}
+
+.calenderDivStock{
+    display: flex;
+    gap: 60px;
+    margin-left: 9%;
+    background-image: url('../../assets/img/Calendar.png');
+    width: 87vw;
+    height: 12vh;
+    padding-top: 1.5%;
+}
+
+#dayStock{
+    
+    margin-left: 8%;
+
+}
+
+#yearStock{
+    margin-left: -7px;
+}
+
+.calenderItemsStock{
+    font-size: 18px;
+    
+}
+
+
+.amountStock{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.currentBalanseStock{
+    font-size: 18px;
+    
+}
+
+.amountandCurrentBalanseStock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#chart-containerStock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.divproductButtonStock{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#buyBtnStock{
+    background-color: #76D1B4;
+    color: white;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#withdrawBtnStock{
+    background-color: #CE5656;
+    color: white;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.allOrdersStock{
+    margin-left: 4%;
+}
+
+.divAllOrdersStock{
+    display: flex;
+    gap: 59%;
+    align-items: center;
+}
+
+#ordensStock{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#verTodasStock{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.allordersDivStock{
+    
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    gap: 5%;
+    padding-left: 4%;
+    background-color: #F6F5FA;
+    width: 28%;
+    height: 7vh;
+}
+
+.allOrdersItemsStock{
+    background-color: #76D1B4;
+    border-radius: 50%;
+    width: 8vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.allOrdersItemsWithdrawStock{
+    background-color: #CE5656;
+    border-radius: 50%;
+    width: 8vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.OrderValueandNameStock{
+    
+    
+}
+
+#OrderNomeStock{
+    margin-top: 2%;
+}
+
+#OrderValueStock{
+    margin-bottom: 2%;
+}
+
+#allOrderslogoStock{
+    color: white;
+    font-weight: bold;
+}
+
+.allOrdersMainDivStock{
+    display: flex;
+}

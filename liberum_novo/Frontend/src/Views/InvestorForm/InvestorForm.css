@@ -1,0 +1,77 @@
+.ContentDivIF{
+    margin-top: 20%;
+}
+
+
+
+
+
+.inputsDivIF{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 15px;
+}
+
+.inputStyleIF{
+    width: 90vw;
+    height: 5vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: white;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25); /* Sombra externa */
+}
+
+.inputStyleIF::placeholder{
+    color: white;
+    font-weight: bold;
+    white-space: pre-wrap; /* Permite quebras de linha */
+    overflow: hidden; /* Evita que o texto seja cortado */
+    text-overflow: ellipsis; /* Adiciona "..." se o texto for muito longo */
+    text-align: center;
+}
+
+#SignUp1IF{
+    font-size: 20px;
+    color: #C4E0F8;
+}
+
+#info{
+    font-size: 20px;
+    color: #C4E0F8;
+    margin-bottom: 3%;
+    margin-left: 4%;
+    text-align: center;
+}
+
+
+
+
+
+
+#graphicIF{
+    width: 115px;
+    height: 92px;
+    margin-left: 40%;
+}
+
+#AvancarBtn{
+    width: 95vw;
+    height: 7vh;
+    background-image: linear-gradient(to right, #B9DBF1, #93C7D6); /* Gradiente linear */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-image 0.3s ease; /* Transição suave */
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 10px 20px rgba(68, 158, 182, 0.42); /* Sombra externa */
+}

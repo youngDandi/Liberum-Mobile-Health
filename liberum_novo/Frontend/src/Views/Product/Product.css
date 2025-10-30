@@ -1,0 +1,217 @@
+.FullScreenProduct{
+    width: 100vw;
+    height: 100vh;
+   
+}
+
+.HeaderProduct{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+.goBackDivProduct{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivProduct{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+
+}
+
+#activeLogoProduct{
+    color: white;
+}
+
+.activeLogoDivProduct{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 8vh;
+    
+}
+
+.activeNameDivProduct{
+    display: flex;
+    align-items: center;
+    margin-left: 6%;
+}
+
+#activeNameProduct{
+    margin-left: 9%;
+    font-size: 25px;
+    
+}
+
+.calenderDiv{
+    display: flex;
+    gap: 60px;
+    margin-left: 9%;
+    background-image: url('../../assets/img/Calendar.png');
+    width: 87vw;
+    height: 12vh;
+    padding-top: 1.5%;
+}
+
+#day{
+    
+    margin-left: 8%;
+
+}
+
+#year{
+    margin-left: -7px;
+}
+
+.calenderItems{
+    font-size: 18px;
+    
+}
+
+
+.amount{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.currentBalanse{
+    font-size: 18px;
+    
+}
+
+.amountandCurrentBalanse{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+#chart-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.divproductButton{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#buyBtn{
+    background-color: #76D1B4;
+    color: white;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#withdrawBtn{
+    background-color: #CE5656;
+    color: white;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.allOrders{
+    margin-left: 4%;
+}
+
+.divAllOrders{
+    display: flex;
+    gap: 59%;
+    align-items: center;
+}
+
+#ordens{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#verTodas{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.allordersDiv{
+    
+    border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px 30px 30px 30px;
+    gap: 5%;
+    padding-left: 4%;
+    background-color: #F6F5FA;
+    width: 28%;
+    height: 7vh;
+}
+
+.allOrdersItems{
+    background-color: #76D1B4;
+    border-radius: 50%;
+    width: 8vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.allOrdersItemsWithdraw{
+    background-color: #CE5656;
+    border-radius: 50%;
+    width: 8vw;
+    height: 4vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+.OrderValueandName{
+    
+    
+}
+
+#OrderNome{
+    margin-top: 2%;
+}
+
+#OrderValue{
+    margin-bottom: 2%;
+}
+
+#allOrderslogo{
+    color: white;
+    font-weight: bold;
+}
+
+.allOrdersMainDiv{
+    display: flex;
+}

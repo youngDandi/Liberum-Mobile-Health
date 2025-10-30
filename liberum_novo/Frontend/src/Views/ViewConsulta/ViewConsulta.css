@@ -1,0 +1,93 @@
+.FullContentViewConsulta{
+    
+    margin-left: 4%;
+    width: 95vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+    
+}
+
+.HeaderViewConsulta{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+
+
+
+.goBackDivViewConsulta{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivViewConsulta{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+
+}
+
+.inputStyleViewconsulta{
+    width: 90vw;
+    height: 5vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: rgb(92, 89, 89);
+    font-weight: bold;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.15); /* Sombra externa */
+    margin-left: -3%;
+    margin-bottom: -7%;
+}
+
+.labelViewConsulta1{
+    display: flex;
+    margin-left: -85%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta2{
+    display: flex;
+    margin-left: -75%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta3{
+    display: flex;
+    margin-left: -78%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta4{
+    display: flex;
+    margin-left: -71%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta5{
+    display: flex;
+    margin-left: -67%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta6{
+    display: flex;
+    margin-left: -80%;
+    margin-bottom: -5%;
+}

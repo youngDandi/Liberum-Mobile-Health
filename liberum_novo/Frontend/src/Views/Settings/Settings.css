@@ -1,0 +1,104 @@
+.FullScreenSeetings{
+    margin-left: 4%;
+    width: 98vw; /* 100% da largura da viewport */
+    height: 100vh;
+}
+
+.HeaderSettings{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-right: 3%;
+    
+    margin-bottom: 20%;
+    gap: 22%;
+}
+
+.goBackDivSettings{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+
+.threeDotsdivSettings{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+.optionsDiv1{
+    display: flex;
+    align-items: center;
+    gap: 56%;
+}
+
+.optionsDiv2{
+    display: flex;
+    align-items: center;
+    gap: 30%;
+}
+
+.optionsItem{
+    font-weight: bold;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estiliza o botão */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+/* Círculo interno do botão */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Quando o checkbox estiver marcado (ligado) */
+input:checked + .slider {
+    background-color: #96C9D9;
+}
+
+input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+Link{
+    text-decoration: none;
+}

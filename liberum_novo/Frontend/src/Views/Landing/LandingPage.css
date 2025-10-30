@@ -1,0 +1,56 @@
+.FullScreen{
+    background-color: #C4E0F8;
+    width: 100vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimentos padrão */
+  border: 1px solid #C4E0F8;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 7vh;
+}
+
+.FirstDivFig{
+    
+    background-color: rgba(222, 236, 248, 0.26);
+    border-radius: 50%;
+    width: 80vw;
+    height: 40vh;
+    align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.SecondDivFig{
+    
+    background-color: rgba(222, 236, 248, 0.26);
+    border-radius: 50%;
+    width: 60vw;
+    height: 30vh;
+    align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#logo{
+    color: white;
+    
+}
+
+#ContinuarBtn{
+    width: 84vw;
+    height: 7vh;
+    background-image: linear-gradient(to right, #B9DBF1, #93C7D6); /* Gradiente linear */
+    border: none; /* Remove a borda padrão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-image 0.3s ease; /* Transição suave */
+    font-weight: bold;
+
+}
+

@@ -1,0 +1,92 @@
+.ContentDiv2{
+    margin-top: 20%;
+}
+
+
+
+.LogandSign2{
+    display: flex;
+    flex-direction: row;
+    
+    margin-left: 60%;
+    gap: 5%;
+}
+
+.inputsDiv2{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-direction: column;
+    
+    gap: 20px;
+}
+
+.inputStyle2{
+    width: 90vw;
+    height: 5vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: white;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25); /* Sombra externa */
+}
+
+.inputStyle3{
+    width: 94vw;
+    height: 6vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: white;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.25); /* Sombra externa */
+}
+
+.inputStyle2::placeholder{
+    color: white;
+    font-weight: bold;
+}
+
+#SignUp1S{
+    font-size: 20px;
+    color: #C4E0F8;
+}
+
+#SignUp2S{
+    font-size: 20px;
+    color: #C4E0F8;
+    margin-bottom: 5%;
+    margin-left: 4%;
+    margin-top: 8%;
+}
+
+#LoginS{
+    font-size: 20px;
+}
+
+
+
+
+#graphic{
+    width: 40vw;
+    height: 17vh;
+    margin-left: 30%;
+}
+
+#CadastrarBtn{
+    width: 95vw;
+    height: 7vh;
+    background-image: linear-gradient(to right, #B9DBF1, #93C7D6); /* Gradiente linear */
+    border: none; /* Remove a borda padrão */
+    border-radius: 10px;
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-image 0.3s ease; /* Transição suave */
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 10px 20px rgba(68, 158, 182, 0.42); /* Sombra externa */
+}
