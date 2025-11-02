@@ -1,0 +1,226 @@
+.FullContentOperationsPP{
+    
+    margin-left: 4%;
+    width: 95vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+    
+}
+
+.HeaderOperationsPP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+
+
+
+.goBackDivOperationsPP{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivOperationsPP{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+
+}
+
+
+.bigCardDivOperationsPP{
+    background: linear-gradient(to right, #96C9D9, #B5D8EE);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 16px;
+    margin-left: 5%;
+    width: 80vw;
+    height: 25vh;
+    margin-top: 15%;
+    padding-left: 2%;
+}
+
+.activeItemdivOperationsPP{
+    display: flex;
+    align-items: center;
+    
+}
+
+.activeLogoDivOperationsSaquePP{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+    height: 5vh;
+    background-color: #94b3cd;
+}
+
+.activeLogoDivOperationsDepositoPP{
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 9vw;
+    height: 5vh;
+    background-color: #94b3cd;
+}
+
+.interventionDivPP{
+
+    
+}
+
+#activeLogoOperationsPP{
+    color: white;
+    
+}
+
+#activeNameOperationsPP{
+    margin-left: 9%;
+}
+
+#dataConsultaPP{
+    margin-left: 8%;
+    margin-top: -9%;
+    
+    width: 45%;
+}
+
+#horaEntradaPP{
+    margin-top: -10%;
+    margin-left: 5%;
+    font-size: 11px;
+    
+}
+
+#estadoPP{
+    display: flex;
+    margin-top: -18%;
+    margin-left: 5%;
+    font-size: 12px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    width: 15vw;
+    height: 3vh;
+}
+
+#horaSaidaPP{
+    margin-top: -10%;
+    margin-left: 5%;
+    font-size: 11px;
+}
+
+.horarioDivPP{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    
+    width: 125%;
+}
+
+.activeValuesOperationsPP{
+    margin-left: 45%;
+    
+    
+}
+
+#activeValues1OperationsPP{
+    
+    margin-top: 3%;
+}
+
+#activeValues2OperationsPP{
+    margin-bottom: 3%;
+    color: #76D1B4;
+}
+
+.bordaOperationsPP{
+    border-bottom: 1px solid #E6E6E6;
+}
+
+#portfolioOperationsPP{
+    color: white;
+    margin-bottom: -2%;
+}
+
+#portfolioValueOperationsPP{
+    color: white;
+    font-size: 38px;
+    margin-bottom: 2%;
+}
+
+#portfolioIconOperationsPP{
+    width: 11px;
+    height: 5px;
+    
+}
+
+.sellsDivOperationsPP{
+    display: flex;
+    
+    border-radius: 40px;
+    margin-right: 2%;
+    justify-content: center;
+    gap: 10%;
+    
+}
+
+.sellItemOperationsPP{
+    color: white;
+    
+}
+
+.bordaVerticalOperationsPP{
+    border-right: 1px solid white;
+    height: 6vh;
+    margin-top: 2%;
+}
+
+.LinkPP{
+    
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+}
+
+#DepositarBtnOperationsPP{
+    background-color: #76D1B4;
+    color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    border-radius: 10px;
+}
+
+#sacarBtnOperationsPP{
+    background-color: #CE5656;
+    color: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    border-radius: 10px;
+}
+
+#consultasPendentesPP{
+    
+    width: 45vw;
+    font-size: 16px;
+}
+
+
+    

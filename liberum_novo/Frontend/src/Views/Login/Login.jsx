@@ -14,7 +14,7 @@ function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [redirectToHome, setRedirectToHome] = useState(false);
-  const api ='http://192.168.1.5:3000'
+  const api ='http://192.168.1.6:3000'
 
   const  {login}  = useAuth();
 

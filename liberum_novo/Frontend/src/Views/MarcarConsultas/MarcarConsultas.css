@@ -1,0 +1,132 @@
+#consultasMC{
+    font-size: 18px;
+}
+
+.FullContentOperationsMC{
+    
+    margin-left: 4%;
+    width: 95vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+    
+}
+
+.HeaderOperationsMC{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+
+
+
+.goBackDivOperationsMC{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivOperationsMC{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+
+}
+
+.labelViewConsulta1MC{
+    display: flex;
+    margin-left: -85%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta2MC{
+    display: flex;
+    margin-left: -67%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta3MC{
+    display: flex;
+    margin-left: -88%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta4MC{
+    display: flex;
+    margin-left: -31%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta5MC{
+    display: flex;
+    margin-left: -67%;
+    margin-bottom: -5%;
+}
+
+.labelViewConsulta6MC{
+    display: flex;
+    margin-left: -80%;
+    margin-bottom: -5%;
+}
+
+#inputImagemMC{
+    margin-bottom: 5%;
+}
+
+.inputStyleViewconsultaMC[type="date"] {
+    text-align: left;       /* Alinha o texto à esquerda */
+    text-align-last: left;  /* Garante que o texto final também fica à esquerda */
+}
+
+.inputStyleViewconsultaMC[type="time"] {
+    text-align: left;       /* Alinha o texto à esquerda */
+    text-align-last: left;  /* Garante que o texto final também fica à esquerda */
+}
+
+.inputStyleViewconsultaMC{
+    width: 90vw;
+    height: 5vh;
+    background-color: #C4E0F8;
+    border: none;
+    border-radius: 11px;
+    font-size: 15px;
+    color: rgb(92, 89, 89);
+    font-weight: bold;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.15); /* Sombra externa */
+    margin-left: -3%;
+    margin-bottom: -7%;
+}
+
+  .buttondivMC{
+    display: flex;
+    align-items: center;
+
+  }
+
+  #inputDatadivMC{
+    margin-bottom: 5%;
+  }
+
+  #MarcarConsultaBtn{
+    background-color: #a7c0d7;
+    font-weight: bold;
+
+}
+
+.imagemFileDivMC{
+    
+    width: 90vw;
+}

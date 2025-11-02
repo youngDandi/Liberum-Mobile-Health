@@ -43,7 +43,7 @@ function Home(){
                                 <div className='MenuDiv'>
                                     <img src={userImage} />
                                 </div>
-                                <h4>Perfil</h4> 
+                            <Link to={"/PedidosPendentes"} className='link'>   <h4>Pendentes</h4> </Link> 
                             </div>
 
                             <div className='divDesign'>
@@ -152,7 +152,7 @@ function Home(){
                                                 <div className='itemDivInv'>
                                                     <p>SG</p>
                                                 </div>
-                                                <Link to={"/Indexes"} className='Link'>   <h4 id='OrderNameI'>Saúde Geral</h4> </Link>
+                                                <Link to={"/MarcarConsultas"} className='Link'>   <h4 id='OrderNameI'>Saúde Geral</h4> </Link>
                                 </div>
                                 
                                     <div className='InvestmentsItemDiv'>
