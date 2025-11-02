@@ -16,6 +16,8 @@ function ViewPedido() {
   const [horaEntradaDC, SetdataHoraentradaDC]= useState('');
   const [comentario, setComentario] = useState('');
   const [imagemFile, setImagemFile] = useState(null);
+  const [requestStatus, setRequestStatus] = useState(''); // ✅ novo estado
+
   const { id } = useParams();
 
   const { user } = useAuth();
@@ -39,6 +41,7 @@ function ViewPedido() {
           SetdataHoraentradaDC(dados.horaEntradaDC);
           setComentario(dados.comentario);
           setImagemFile(dados.imagemPath);
+          setRequestStatus(dados.requestStatus || ''); // ✅ salvar status
           // aqui você pode setar outros estados com os dados do pedido
         } else {
           console.warn('Pedido não encontrado ou erro na requisição.');
@@ -108,7 +111,9 @@ function ViewPedido() {
         </div>
       </div>
 
+      
       <form className="inputsDiv2" onSubmit={handleUpdate}>
+      
         <p className="labelViewConsulta1VP">Nome:</p>
         <input
           className="inputStyleViewconsultaVP"
@@ -167,11 +172,19 @@ function ViewPedido() {
         />
         
         
-
-        <div className='buttondivVP'>
-            <button type="submit" className="validateButtonVP" id='MarcarConsultaBtnVP'>Validar</button>
-            <button type="submit" className="rescheduleButtonVP" onClick={handleUpdate} id='MarcarConsultaBtnVP'>Reagendar</button>
-        </div>
+            {/* ✅ Só mostra o botão se o pedido NÃO estiver validado */}
+            {requestStatus !== 'Validado' && (
+                      <div className='buttondivVP'>
+                        <button
+                          type="submit"
+                          className="rescheduleButtonVP"
+                          id='MarcarConsultaBtnVP'
+                          onClick={handleUpdate}
+                        >
+                          Reagendar
+                        </button>
+                      </div>
+                    )}
 
         
       </form>

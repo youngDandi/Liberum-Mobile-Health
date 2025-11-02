@@ -6,7 +6,7 @@ import Login from './Views/Login/Login.jsx';
 import SignUp from './Views/SignUp/SignUp.jsx';
 import InvestorForm from './Views/InvestorForm/InvestorForm.jsx';
 import Home from './Views/Home/Home.jsx';
-import Cryptocurrencies from './Views/Cryptocurrencies/Cryptocurrencies.jsx';
+import AnaliseImagens from './Views/AnaliseImagens/AnaliseImagens.jsx';
 import Settings from './Views/Settings/Settings.jsx';
 import Product from './Views/Product/Product.jsx';
 import Consultas from './Views/Consultas/Consultas.jsx';
@@ -36,7 +36,7 @@ function App() {
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/InvestorForm' element={<InvestorForm />} />
           <Route path='/Home' element={<Home />} />
-          <Route path='/Cryptocurrencies' element={<Cryptocurrencies />}/>
+          <Route path='/AnaliseImagens' element={<AnaliseImagens />}/>
           <Route path='/Indexes' element={<Indexes />} />
           <Route path='/Settings' element={<Settings />} />
           <Route path='/crypto/:id' element={<Product />} />

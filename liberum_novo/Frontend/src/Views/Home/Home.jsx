@@ -91,7 +91,7 @@ function Home(){
                                 <div className='MenuDiv'>
                                     <img src={simulations} id='simulations'/>
                                 </div>
-                                <h4>Teleconsultas</h4> 
+                                <h4>Perfil</h4> 
                             </div>
 
 
@@ -150,16 +150,16 @@ function Home(){
 
                                 <div className='InvestmentsItemDiv'>
                                                 <div className='itemDivInv'>
-                                                    <p>SG</p>
+                                                    <p>MC</p>
                                                 </div>
-                                                <Link to={"/MarcarConsultas"} className='Link'>   <h4 id='OrderNameI'>Saúde Geral</h4> </Link>
+                                                <Link to={"/MarcarConsultas"} className='Link'>   <h4 id='OrderNameI'>Marcar Consultas</h4> </Link>
                                 </div>
                                 
                                     <div className='InvestmentsItemDiv'>
                                                     <div className='itemDivInv'>
-                                                        <p>SO</p>
+                                                        <p>AI</p>
                                                     </div>
-                                                 <Link to={"/Cryptocurrencies"} className='Link'>   <h4 id='OrderNameI'>Saúde Ocupacional</h4> </Link>
+                                                 <Link to={"/AnaliseImagens"} className='Link'>   <h4 id='OrderNameI'>Análise de Imagens</h4> </Link>
                                     </div>
                                 
                                 

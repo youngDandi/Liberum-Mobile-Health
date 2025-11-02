@@ -1,9 +1,4 @@
-#consultasVP{
-    width: 45vw;
-    font-size: 16px;
-}
-
-.FullContentOperationsVP{
+.FullContentOperationsAI{
     
     margin-left: 4%;
     width: 95vw; /* 100% da largura da viewport */
@@ -11,7 +6,7 @@
     
 }
 
-.HeaderOperationsVP{
+.HeaderOperationsAI{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +19,7 @@
 
 
 
-.goBackDivOperationsVP{
+.goBackDivOperationsAI{
     
     border-radius: 50%;
     display: flex;
@@ -35,7 +30,53 @@
     background-color: #E6E6E6;
 }
 
-.threeDotsdivOperationsVP{
+.Link{
+    
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Mantém a cor do texto padrão */
+}
+#consultasAI{
+    font-size: 18px;
+    width: 55vw;
+}
+
+#consultasAI{
+    font-size: 18px;
+}
+
+.FullContentOperationsAI{
+    
+    margin-left: 4%;
+    width: 95vw; /* 100% da largura da viewport */
+  height: 100vh; /* 100% da altura da viewport */
+    
+}
+
+.HeaderOperationsAI{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    margin-bottom: 5%;
+    gap: 16%;
+}
+
+
+
+
+.goBackDivOperationsAI{
+    
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 14vw;
+    height: 7vh;
+    background-color: #E6E6E6;
+}
+
+.threeDotsdivOperationsAI{
     
     border-radius: 50%;
     display: flex;
@@ -47,57 +88,57 @@
 
 }
 
-.labelViewConsulta1VP{
+.labelViewConsulta1AI{
     display: flex;
     margin-left: -85%;
     margin-bottom: -5%;
 }
 
-.labelViewConsulta2VP{
+.labelViewConsulta2AI{
     display: flex;
     margin-left: -67%;
     margin-bottom: -5%;
 }
 
-.labelViewConsulta3VP{
+.labelViewConsulta3AI{
     display: flex;
-    margin-left: -78%;
+    margin-left: -88%;
     margin-bottom: -5%;
 }
 
-.labelViewConsulta4VP{
+.labelViewConsulta4AI{
     display: flex;
     margin-left: -31%;
     margin-bottom: -5%;
 }
 
-.labelViewConsulta5VP{
+.labelViewConsulta5AI{
     display: flex;
     margin-left: -67%;
     margin-bottom: -5%;
 }
 
-.labelViewConsulta6VP{
+.labelViewConsulta6AI{
     display: flex;
     margin-left: -80%;
     margin-bottom: -5%;
 }
 
-#inputImagemVP{
+#inputImagemAI{
     margin-bottom: 5%;
 }
 
-.inputStyleViewconsultaVP[type="date"] {
+.inputStyleViewconsultaAI[type="date"] {
     text-align: left;       /* Alinha o texto à esquerda */
     text-align-last: left;  /* Garante que o texto final também fica à esquerda */
 }
 
-.inputStyleViewconsultaVP[type="time"] {
+.inputStyleViewconsultaAI[type="time"] {
     text-align: left;       /* Alinha o texto à esquerda */
     text-align-last: left;  /* Garante que o texto final também fica à esquerda */
 }
 
-.inputStyleViewconsultaVP{
+.inputStyleViewconsultaAI{
     width: 90vw;
     height: 5vh;
     background-color: #C4E0F8;
@@ -111,57 +152,23 @@
     margin-bottom: -7%;
 }
 
-  .buttondivVP{
+  .buttondivAI{
     display: flex;
     align-items: center;
-    gap: 15px;
 
   }
 
-  #inputDatadivMC{
+  #inputDatadivAI{
     margin-bottom: 5%;
   }
 
-  #MarcarConsultaBtnVP{
-    
+  #MarcarConsultaBtn{
+    background-color: #a7c0d7;
     font-weight: bold;
 
 }
 
-.imagemFileDivMC{
+.imagemFileDivAI{
     
     width: 90vw;
 }
-
-.validateButtonVP{
-width: 25vw;
-border: 1px solid #506172;
-background-color: #a7c0d7;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.rescheduleButtonVP{
-    width: 25vw;
-    border: 1px solid #30516f;
-    background-color: #4e80af;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.formContainerVP {
-    position: relative; /* necessário para posicionar o loading dentro */
-  }
-  
-  .formLoadingVP {
-    position: absolute;
-    inset: 0; /* cobre o form todo */
-    background-color: rgba(255, 255, 255, 0.8); /* leve fundo branco */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-  }
-  

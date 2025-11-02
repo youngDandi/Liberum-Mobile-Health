@@ -58,7 +58,7 @@ function MarcarConsultas() {
       navigate("/Home");
     } catch (error) {
       console.error("❌ Erro ao enviar consulta:", error);
-      alert("Erro ao marcar consulta. Tenta novamente.");
+      alert("Já existe uma Consulta marcada para esta data e hora. Por favor, Tente marcar para outra Data ou hora!!");
     } finally {
       setLoading(false);
     }
