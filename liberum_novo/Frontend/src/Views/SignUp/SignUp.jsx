@@ -71,7 +71,7 @@ function SignUp() {
               <select className='inputStyle3' value={sexo} onChange={(e) => setSexo(e.target.value)}>
                 <option value="" disabled> Seleccione o sexo</option>
                 <option value="Masculino" >Masculino</option>
-                <option value="Femenino" >Femenino</option>
+                <option value="Feminino" >Feminino</option>
                 
               </select>
 

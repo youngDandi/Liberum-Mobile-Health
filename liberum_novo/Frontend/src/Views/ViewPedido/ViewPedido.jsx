@@ -17,37 +17,57 @@ function ViewPedido() {
   const [comentario, setComentario] = useState('');
   const [imagemFile, setImagemFile] = useState(null);
   const [requestStatus, setRequestStatus] = useState(''); // ✅ novo estado
-
+  const [medicoNome, setMedicoNome] = useState('');
+  const [medicoEmail, setMedicoEmail] = useState('');
   const { id } = useParams();
 
   const { user } = useAuth();
   const navigate = useNavigate();
 
   // ✅ Define a URL da tua API (ajusta conforme IP e porta)
-  const api = 'http://192.168.1.6:3000';
+  const api = 'http://192.168.1.5:3000';
 
 
   useEffect(() => {
     const fetchPedido = async () => {
       try {
+        console.log(`📡 A buscar dados do pedido com ID: ${id}...`);
         const response = await axios.get(`${api}/api/pedidos-mobile/${id}`);
+  
         if (response.status === 200) {
-          const dados = response.data; // ajusta com o que seu backend retorna
+          const dados = response.data;
+          console.log("✅ Pedido recebido do backend:", dados);
+  
+          // 🧩 Preenche os estados do paciente
+          SetNome(dados.nome || "");
+          SetEmail(dados.email || "");
+          SetTelefone(dados.telefone || "");
+          SetDataConsulta(dados.dataConsulta || "");
+          SetdataHoraentradaDC(dados.horaEntradaDC || "");
+          setComentario(dados.comentario || "");
+          setImagemFile(dados.imagemPath || "");
+          setRequestStatus(dados.requestStatus || "");
           
-          SetNome(dados.nome);
-          SetEmail(dados.email);
-          SetTelefone(dados.telefone);
-          SetDataConsulta(dados.dataConsulta);
-          SetdataHoraentradaDC(dados.horaEntradaDC);
-          setComentario(dados.comentario);
-          setImagemFile(dados.imagemPath);
-          setRequestStatus(dados.requestStatus || ''); // ✅ salvar status
-          // aqui você pode setar outros estados com os dados do pedido
+          
+  
+          // 👨‍⚕️ Dados do médico (caso existam)
+          if (dados.validadoPor) {
+            console.log("👨‍⚕️ Médico validador:", dados.validadoPor);
+            setMedicoNome(dados.validadoPor.nome || "");
+            setMedicoEmail(dados.validadoPor.email || "");
+            
+          } else {
+            console.log("⚠️ Nenhum médico associado a este pedido.");
+            setMedicoNome("");
+            setMedicoEmail("");
+            
+          }
+  
         } else {
-          console.warn('Pedido não encontrado ou erro na requisição.');
+          console.warn("⚠️ Pedido não encontrado ou erro na requisição.");
         }
       } catch (error) {
-        console.error('Erro ao buscar pedido:', error);
+        console.error("❌ Erro ao buscar pedido:", error);
       }
     };
   
@@ -55,6 +75,7 @@ function ViewPedido() {
       fetchPedido();
     }
   }, [id]);
+  
   
 
   // ✅ Função para enviar dados ao backend
@@ -138,6 +159,15 @@ function ViewPedido() {
           placeholder="Telefone"
           value={telefone || ''}
           onChange={(e) => SetTelefone(e.target.value)}
+          required
+        />
+
+<p className="labelViewConsulta1VP">Médico:</p>
+        <input
+          className="inputStyleViewconsultaVP"
+          placeholder="Nome"
+          value={medicoNome || ''}
+          onChange={(e) => setMedicoNome(e.target.value)}
           required
         />
 

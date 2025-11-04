@@ -15,6 +15,8 @@ function Home(){
 
     const {user} = useAuth();
 
+    console.log("🔍 Dados do utilizador logado:", user);
+
     return(
         <div className='FullScreenHome'>
             <div className='UserandCard'>
@@ -41,9 +43,9 @@ function Home(){
                 <div className='MenuButtonsDiv'>
                             <div className='MenuandTextDiv'>
                                 <div className='MenuDiv'>
-                                    <img src={userImage} />
+                                    <p>M</p>
                                 </div>
-                            <Link to={"/PedidosPendentes"} className='link'>   <h4>Pendentes</h4> </Link> 
+                            <Link to={"/PedidosPendentes"} className='Link'>   <h4>Marcações</h4> </Link> 
                             </div>
 
                             <div className='divDesign'>
@@ -59,9 +61,9 @@ function Home(){
 
                             <div className='MenuandTextDiv'>
                                 <div className='MenuDiv'>
-                                    <img src={deposit} id='deposit'/>
+                                    <p>H</p>
                                 </div>
-                                <Link to={"/Consultas"} className='link'> <h4>Consultas</h4> </Link>
+                                <Link to={"/Consultas"} className='Link'> <h4>Histórico</h4> </Link>
                             </div>
 
 
@@ -71,9 +73,9 @@ function Home(){
                 <div className='MenuButtonsDiv1'>
                             <div className='MenuandTextDiv'>
                                 <div className='MenuDiv'>
-                                    <img src={withdraw} id='withdraw'/>
+                                    <p>CH</p>
                                 </div>
-                                <Link to={"/ChatBot"} className='link'> <h4>ChatBot</h4> </Link>
+                                <Link to={"/ChatBot"} className='Link'> <h4>ChatBot</h4> </Link>
                             </div>
 
                             <div className='divDesign'>
@@ -89,9 +91,9 @@ function Home(){
 
                             <div className='MenuandTextDiv'>
                                 <div className='MenuDiv'>
-                                    <img src={simulations} id='simulations'/>
+                                    <p>E</p>
                                 </div>
-                                <h4>Perfil</h4> 
+                              <Link to={"/Exames"} className='Link'>  <h4>Exames</h4> </Link>
                             </div>
 
 
@@ -155,12 +157,17 @@ function Home(){
                                                 <Link to={"/MarcarConsultas"} className='Link'>   <h4 id='OrderNameI'>Marcar Consultas</h4> </Link>
                                 </div>
                                 
-                                    <div className='InvestmentsItemDiv'>
-                                                    <div className='itemDivInv'>
-                                                        <p>AI</p>
-                                                    </div>
-                                                 <Link to={"/AnaliseImagens"} className='Link'>   <h4 id='OrderNameI'>Análise de Imagens</h4> </Link>
-                                    </div>
+                                    {/* 🔽 Mostra "Análise de Imagens" apenas se o user for mulher */}
+                                        {user.sexo === "Feminino" && (
+                                            <div className='InvestmentsItemDiv'>
+                                                <div className='itemDivInv'>
+                                                    <p>AI</p>
+                                                </div>
+                                                <Link to={"/AnaliseImagens"} className='Link'>   
+                                                    <h4 id='OrderNameI'>Análise de Imagens</h4> 
+                                                </Link>
+                                            </div>
+                                        )}
                                 
                                 
 

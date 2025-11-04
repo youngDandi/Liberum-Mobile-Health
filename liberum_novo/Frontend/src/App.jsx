@@ -19,7 +19,8 @@ import ChatBot from './Views/Chatbot/Chatbot.jsx';
 import MarcarConsultas from './Views/MarcarConsultas/MarcarConsulta.jsx';
 import PedidosPendentes from './Views/PedidosPendentes/PedidosPendentes.jsx';
 import ViewPedido from './Views/ViewPedido/ViewPedido.jsx';
-
+import Exames from './Views/Exames/Exames.jsx';
+import ViewExam from './Views/ViewExam/ViewExam.jsx';
 import { AuthProvider } from '../../Frontend/src/hooks/AuthContext.jsx';
 
 
@@ -49,6 +50,8 @@ function App() {
           <Route path='/MarcarConsultas' element={<MarcarConsultas/>} />
           <Route path='/PedidosPendentes' element={<PedidosPendentes/>} />
           <Route path='/ViewPedido/:id' element={<ViewPedido/>} />
+          <Route path='/Exames' element={<Exames/>} />
+          <Route path='/ViewExam/:id' element={<ViewExam/>} />
         </Routes>
       </AuthProvider>  
       </Router>

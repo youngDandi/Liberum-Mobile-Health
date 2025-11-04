@@ -13,7 +13,7 @@ function Consultas() {
   const [consultas, setConsultas] = useState([]);
   const [erro, setErro] = useState('');
   const navigate = useNavigate();
-  const api = 'http://192.168.1.6:3000';
+  const api = 'http://192.168.1.5:3000';
 
   useEffect(() => {
     const fetchConsultasPaciente = async () => {

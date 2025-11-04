@@ -20,7 +20,7 @@ function MarcarConsultas() {
   const navigate = useNavigate();
 
   // ✅ Define a URL da tua API (ajusta conforme IP e porta)
-  const api = 'http://192.168.1.6:3000';
+  const api = 'http://192.168.1.5:3000';
 
   // ✅ Função para enviar dados ao backend
   const handleSubmit = async (e) => {
@@ -54,7 +54,7 @@ function MarcarConsultas() {
       });
   
       console.log("✅ Consulta registrada com sucesso:", response.data);
-      alert("Consulta marcada com sucesso!");
+      alert("Pedido submetido com sucesso!");
       navigate("/Home");
     } catch (error) {
       console.error("❌ Erro ao enviar consulta:", error);
