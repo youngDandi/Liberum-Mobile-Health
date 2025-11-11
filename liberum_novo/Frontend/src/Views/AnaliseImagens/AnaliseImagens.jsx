@@ -104,23 +104,7 @@ function AnaliseImagens (){
             required
           />
 
-          <p className="labelViewConsulta1AI">Email:</p>
-          <input
-            className="inputStyleViewconsultaAI"
-            placeholder="Email"
-            value={user?.email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-
-          <p className="labelViewConsulta1AI">Telefone:</p>
-          <input
-            className="inputStyleViewconsultaAI"
-            placeholder="Telefone"
-            value={user?.telefone}
-            onChange={(e) => setTelefone(e.target.value)}
-            required
-          />
+          
 
           <p className="labelViewConsulta2AI">Data do Exame:</p>
           <input

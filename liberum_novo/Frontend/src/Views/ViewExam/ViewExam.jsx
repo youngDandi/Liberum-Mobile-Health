@@ -103,23 +103,7 @@ function ViewExam() {
           required
         />
 
-        <p className="labelViewConsulta1VE">Email:</p>
-        <input
-          className="inputStyleViewconsultaVE"
-          placeholder="Email"
-          value={email || ''}
-          onChange={(e) => SetEmail(e.target.value)}
-          required
-        />
-
-        <p className="labelViewConsulta1VE">Telefone:</p>
-        <input
-          className="inputStyleViewconsultaVE"
-          placeholder="Telefone"
-          value={telefone || ''}
-          onChange={(e) => SetTelefone(e.target.value)}
-          required
-        />
+        
 
 <p className="labelViewConsulta1VE">Médico:</p>
         <input

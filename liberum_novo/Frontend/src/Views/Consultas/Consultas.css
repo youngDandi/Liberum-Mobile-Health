@@ -95,6 +95,15 @@
     
 }
 
+#activeName{
+    margin-left: 9%;
+}
+
+.Link{
+
+    text-decoration: none;
+}
+
 #dataConsulta{
     margin-left: 8%;
     margin-top: -8%;

@@ -78,7 +78,7 @@ function PedidosPendentes() {
 
                 <div className='interventionDivPP'>
                     <Link to={`/ViewPedido/${pedido.id}`}>
-                    <h3 id='activeNameOperationsPP' className='link'>{pedido.nome}</h3>
+                    <h3 id='activeNameOperationsPP' className='link'>{`Marcação ${index + 1}`}</h3>
                     </Link>
                     <div className='horarioDivPP'>
                     <h5 id='dataConsultaPP'>{pedido.dataConsulta}</h5>

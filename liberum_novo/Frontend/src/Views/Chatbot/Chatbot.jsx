@@ -9,7 +9,7 @@ import { useAuth } from '../../hooks/AuthContext.jsx';
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const API_URL = "http://192.168.1.6:3000/api/chat/message";
+  const API_URL = "http://192.168.1.5:3000/api/chat/message";
 const  {user}  = useAuth();
  
 const sendMessage = async () => {

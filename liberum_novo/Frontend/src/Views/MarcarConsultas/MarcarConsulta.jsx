@@ -94,23 +94,7 @@ function MarcarConsultas() {
           required
         />
 
-        <p className="labelViewConsulta1MC">Email:</p>
-        <input
-          className="inputStyleViewconsultaMC"
-          placeholder="Email"
-          value={email || user?.email || ''}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-
-        <p className="labelViewConsulta1MC">Telefone:</p>
-        <input
-          className="inputStyleViewconsultaMC"
-          placeholder="Telefone"
-          value={telefone || user?.telefone || ''}
-          onChange={(e) => setTelefone(e.target.value)}
-          required
-        />
+        
 
         <p className="labelViewConsulta2MC">Data da Consulta:</p>
         <input

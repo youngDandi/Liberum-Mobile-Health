@@ -37,7 +37,7 @@ function Settings (){
                         </label>
                     </div>
                     <div className='optionsDiv'>
-                       <Link to={'/'}><p className='optionsItem'>Sair</p></Link> 
+                       <Link to={'/'} className='Link'><p className='optionsItem'>Sair</p></Link> 
                     </div>
                     
                 </div>

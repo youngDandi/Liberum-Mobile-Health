@@ -95,7 +95,7 @@ function Consultas() {
                   </div>
 
                   <div className='interventionDiv'>
-                   <Link to={`/ViewConsulta/${consulta.id }`}> <h3 id='activeName'>{consulta.intervencao}</h3> </Link>
+                   <Link to={`/ViewConsulta/${consulta.id }`} className='Link'> <h3 id='activeName' >{`Consulta ${index + 1}`}</h3> </Link>
                     <div className='horarioDiv'>
                       <h5 id='dataConsulta'>{consulta.dataConsulta}</h5>
                       

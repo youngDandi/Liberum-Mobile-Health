@@ -133,34 +133,7 @@ function ViewPedido() {
       </div>
 
       
-      <form className="inputsDiv2" onSubmit={handleUpdate}>
-      
-        <p className="labelViewConsulta1VP">Nome:</p>
-        <input
-          className="inputStyleViewconsultaVP"
-          placeholder="Nome"
-          value={nome || ''}
-          onChange={(e) => SetNome(e.target.value)}
-          required
-        />
-
-        <p className="labelViewConsulta1VP">Email:</p>
-        <input
-          className="inputStyleViewconsultaVP"
-          placeholder="Email"
-          value={email || ''}
-          onChange={(e) => SetEmail(e.target.value)}
-          required
-        />
-
-        <p className="labelViewConsulta1VP">Telefone:</p>
-        <input
-          className="inputStyleViewconsultaVP"
-          placeholder="Telefone"
-          value={telefone || ''}
-          onChange={(e) => SetTelefone(e.target.value)}
-          required
-        />
+      <form className="inputsDiv2" onSubmit={handleUpdate}> 
 
 <p className="labelViewConsulta1VP">Médico:</p>
         <input

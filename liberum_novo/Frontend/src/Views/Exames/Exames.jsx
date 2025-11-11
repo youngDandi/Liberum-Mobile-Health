@@ -80,7 +80,7 @@ function Exames() {
                   </div>
 
                   <div className='interventionDivEX'>
-                    <Link to={`/ViewExam/${exame.id}`} className='Link'> <h3 id='activeNameOperationsEX'>{exame.nome}</h3></Link>
+                    <Link to={`/ViewExam/${exame.id}`} className='Link'> <h3 id='activeNameOperationsEX'>{`Exame ${index + 1}`}</h3></Link>
 
                     <div className='horarioDivEX'>
                       <h5 id='dataConsultaEX'>{exame.dataExame}</h5>
