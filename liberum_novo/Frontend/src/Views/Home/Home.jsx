@@ -1,185 +1,155 @@
 import './Home.css';
 import { Link } from 'react-router-dom';
-import arrowDown from '../../assets/img/arrowDown.png';
-import card from '../../assets/img/card.png';
-import userImage from '../../assets/img/user.png';
-import circle from '../../assets/img/Circle.png';
-import rectangle from '../../assets/img/Rectangle.png';
-import deposit from '../../assets/img/deposit.png';
-import withdraw from '../../assets/img/withdraw.png';
-import simulations from '../../assets/img/simulations.png';
-
 import { useAuth } from '../../hooks/AuthContext.jsx';
 
-function Home(){
+function Home() {
+  const { user } = useAuth();
 
-    const {user} = useAuth();
+  console.log("🔍 Dados do utilizador logado:", user);
 
-    console.log("🔍 Dados do utilizador logado:", user);
-
-    return(
-        <div className='FullScreenHome'>
-            <div className='UserandCard'>
-                <div className='UserandMessage'>
-                        <div className='UsernameDiv'> 
-                            <h2 id='Ola'>Olá</h2>
-                            <h2 id='Username'> {user.nome}!</h2>
-                            <img src={arrowDown} />
-                        </div>
-                        <h4 id='message'>Pronto para começar o dia?</h4>
-                </div>
-
-                <div className='CardandTextDiv'>
-                    <div className='cardDiv'>
-                       <img src={card} id='card'/> 
-                    </div>
-                    <h4>Saúde</h4>
-                </div>
-
-            </div>
-               
-                <h1 id='money'>Liberum</h1>
-
-                <div className='MenuButtonsDiv'>
-                            <div className='MenuandTextDiv'>
-                                <div className='MenuDiv'>
-                                    <p>M</p>
-                                </div>
-                            <Link to={"/PedidosPendentes"} className='Link'>   <h4>Marcações</h4> </Link> 
-                            </div>
-
-                            <div className='divDesign'>
-                                <p>luis</p>
-                            </div>
-
-
-                            
-                        
-
-
-
-
-                            <div className='MenuandTextDiv'>
-                                <div className='MenuDiv'>
-                                    <p>H</p>
-                                </div>
-                                <Link to={"/Consultas"} className='Link'> <h4>Histórico</h4> </Link>
-                            </div>
-
-
-                </div>
-
-
-                <div className='MenuButtonsDiv1'>
-                            <div className='MenuandTextDiv'>
-                                <div className='MenuDiv'>
-                                    <p>CH</p>
-                                </div>
-                                <Link to={"/ChatBot"} className='Link'> <h4>ChatBot</h4> </Link>
-                            </div>
-
-                            <div className='divDesign'>
-                                <p>luis</p>
-                            </div>
-
-
-                            
-                        
-
-
-
-
-                            <div className='MenuandTextDiv'>
-                                <div className='MenuDiv'>
-                                    <p>E</p>
-                                </div>
-                              <Link to={"/Exames"} className='Link'>  <h4>Exames</h4> </Link>
-                            </div>
-
-
-                </div>
-
-
-
-
-                <div>
-
-
-                    <div className='OrderandDay'>
-                        <h2>Receitas</h2>
-                        <div className='DayandArrow'>
-                                <h4>Hoje</h4>
-                                <img src={arrowDown} />
-                        </div>
-                        
-                    </div>
-
-
-
-                    <div className='Orderlist'>
-
-
-                                <div className='plusDiv'>
-                                    <p id='plusIcon'>+</p>
-                                </div>
-
-                                <div className='OrdersItemDiv'>
-                                        <div className='itemDiv'>
-                                            <p>R</p>
-                                        </div>
-                                        <h4 id='OrderName'>Receita1</h4> 
-                                </div>
-                                <div className='OrdersItemDiv'>
-                                        <div className='itemDiv'>
-                                            <p>R</p>
-                                        </div>
-                                        <h4 id='OrderName'>Receita2</h4> 
-                                </div>
-                                <div className='OrdersItemDiv'>
-                                        <div className='itemDiv'>
-                                            <p>R</p>
-                                        </div>
-                                        <h4 id='OrderName'>Receita3</h4> 
-                                </div>
-                    </div>
-
-
-
-
-                    <h2 id='Investments'>Módulos</h2>
-                    <div className='InvestimentslistDiv'>
-
-
-                                <div className='InvestmentsItemDiv'>
-                                                <div className='itemDivInv'>
-                                                    <p>MC</p>
-                                                </div>
-                                                <Link to={"/MarcarConsultas"} className='Link'>   <h4 id='OrderNameI'>Marcar Consultas</h4> </Link>
-                                </div>
-                                
-                                    {/* 🔽 Mostra "Análise de Imagens" apenas se o user for mulher */}
-                                        {user.sexo === "Feminino" && (
-                                            <div className='InvestmentsItemDiv'>
-                                                <div className='itemDivInv'>
-                                                    <p>AI</p>
-                                                </div>
-                                                <Link to={"/AnaliseImagens"} className='Link'>   
-                                                    <h4 id='OrderNameI'>Análise de Imagens</h4> 
-                                                </Link>
-                                            </div>
-                                        )}
-                                
-                                
-
-
-                    </div>
-                    
-                </div>
-                
-            
+  return (
+    <div className='home-container'>
+      {/* Header Section */}
+      <header className='home-header'>
+        <div className='user-section'>
+          <div className='user-avatar'>
+            <span className='avatar-text'>
+              {user?.nome?.charAt(0).toUpperCase() || 'U'}
+            </span>
+          </div>
+          <div className='user-info'>
+            <p className='greeting'>Olá, <span className='user-name'>{user?.nome || 'Utilizador'}!</span></p>
+            <p className='subgreeting'>Pronto para começar o dia?</p>
+          </div>
         </div>
-    )
+
+        <div className='health-badge'>
+          <span className='badge-icon'>🏥</span>
+          <span className='badge-text'>Saúde</span>
+        </div>
+      </header>
+
+      {/* Logo Section */}
+      <div className='logo-section-home'>
+        <div className='logo-circle-home'>
+          <span className='logo-letter-home'>L</span>
+        </div>
+        <h1 className='logo-text-home'>Liberum</h1>
+      </div>
+
+      {/* Main Menu Grid */}
+      <section className='main-menu'>
+        <h2 className='section-title-home'>Menu Principal</h2>
+        
+        <div className='menu-grid'>
+          <Link to='/PedidosPendentes' className='menu-card'>
+            <div className='menu-icon'>
+              <span className='icon-text'>📅</span>
+            </div>
+            <h3 className='menu-title'>Marcações</h3>
+            <p className='menu-subtitle'>Ver agendamentos</p>
+          </Link>
+
+          <Link to='/Consultas' className='menu-card'>
+            <div className='menu-icon'>
+              <span className='icon-text'>📋</span>
+            </div>
+            <h3 className='menu-title'>Histórico</h3>
+            <p className='menu-subtitle'>Consultas anteriores</p>
+          </Link>
+
+          <Link to='/ChatBot' className='menu-card'>
+            <div className='menu-icon'>
+              <span className='icon-text'>💬</span>
+            </div>
+            <h3 className='menu-title'>ChatBot</h3>
+            <p className='menu-subtitle'>Assistente virtual</p>
+          </Link>
+
+          <Link to='/Exames' className='menu-card'>
+            <div className='menu-icon'>
+              <span className='icon-text'>🔬</span>
+            </div>
+            <h3 className='menu-title'>Exames</h3>
+            <p className='menu-subtitle'>Resultados médicos</p>
+          </Link>
+        </div>
+      </section>
+
+      {/* Prescriptions Section */}
+      <section className='prescriptions-section'>
+        <div className='section-header-home'>
+          <h2 className='section-title-home'>Receitas</h2>
+          <div className='time-filter'>
+            <span className='filter-text'>Hoje</span>
+            <span className='filter-icon'>📅</span>
+          </div>
+        </div>
+
+        <div className='prescriptions-scroll'>
+          <button className='add-prescription-btn'>
+            <span className='plus-icon'>+</span>
+          </button>
+
+          <div className='prescription-card'>
+            <div className='prescription-icon'>
+              <span>💊</span>
+            </div>
+            <p className='prescription-name'>Receita 1</p>
+          </div>
+
+          <div className='prescription-card'>
+            <div className='prescription-icon'>
+              <span>💊</span>
+            </div>
+            <p className='prescription-name'>Receita 2</p>
+          </div>
+
+          <div className='prescription-card'>
+            <div className='prescription-icon'>
+              <span>💊</span>
+            </div>
+            <p className='prescription-name'>Receita 3</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Modules Section */}
+      <section className='modules-section'>
+        <h2 className='section-title-home'>Módulos</h2>
+        
+        <div className='modules-grid'>
+          <Link to='/MarcarConsultas' className='module-card'>
+            <div className='module-icon-wrapper'>
+              <div className='module-icon'>
+                <span className='module-icon-text'>📆</span>
+              </div>
+            </div>
+            <h3 className='module-title'>Marcar Consultas</h3>
+            <p className='module-description'>Agende sua consulta médica</p>
+          </Link>
+
+          {/* Condicional: Análise de Imagens apenas para mulheres */}
+          {user?.sexo === "Feminino" && (
+            <Link to='/AnaliseImagens' className='module-card module-card-featured'>
+              <div className='featured-badge'>
+                <span>♀️</span>
+              </div>
+              <div className='module-icon-wrapper'>
+                <div className='module-icon module-icon-pink'>
+                  <span className='module-icon-text'>🩺</span>
+                </div>
+              </div>
+              <h3 className='module-title'>Análise de Imagens</h3>
+              <p className='module-description'>Exames mamográficos</p>
+            </Link>
+          )}
+        </div>
+      </section>
+
+      
+    </div>
+  );
 }
 
-
-    export default Home
+export default Home;
