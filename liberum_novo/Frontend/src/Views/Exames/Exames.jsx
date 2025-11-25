@@ -1,10 +1,7 @@
 import './Exames.css';
-import goBack from '../../assets/img/goBack.png';
-import threeDots from '../../assets/img/threeDots.png';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/AuthContext.jsx';
 import { useEffect, useState } from 'react';
-import Loading from '../../Components/Loading/Loading';
 import axios from 'axios';
 
 function Exames() {
@@ -12,9 +9,9 @@ function Exames() {
   const [loading, setLoading] = useState(true);
   const [exames, setExames] = useState([]);
   const [erro, setErro] = useState('');
-  const api = 'http://192.168.1.5:3000';
+  const [filter, setFilter] = useState('todos'); // 'todos', 'pendentes', 'validados'
+  const api = 'http://192.168.1.7:3000';
 
-  // ✅ Buscar exames do utilizador
   useEffect(() => {
     const fetchExames = async () => {
       console.log("📡 [FRONTEND] A buscar exames do utilizador...");
@@ -36,84 +33,187 @@ function Exames() {
 
     if (user?.id) {
       fetchExames();
+    } else {
+      setLoading(false);
     }
   }, [user?.id]);
 
+  const filteredExames = exames.filter((exame) => {
+    if (filter === 'todos') return true;
+    if (filter === 'pendentes') return exame.requestStatus === 'Pendente';
+    if (filter === 'validados') return exame.requestStatus === 'Validado';
+    return true;
+  });
+
+  const pendentesCount = exames.filter(e => e.requestStatus === 'Pendente').length;
+  const validadosCount = exames.filter(e => e.requestStatus === 'Validado').length;
+
   return (
-    <div className='FullContentOperationsEX'>
-      <div className='HeaderOperationsEX'>
-        <div className='goBackDivOperationsEX'>
-          <Link to={'/Home'}>
-            <img src={goBack} alt='Voltar' />
-          </Link>
+    <div className='exames-container'>
+      {/* Header */}
+      <header className='exames-header'>
+        <Link to='/Home' className='back-btn-exames'>
+          <span className='back-icon-exames'>←</span>
+        </Link>
+
+        <h1 className='page-title-exames'>Meus Exames</h1>
+
+        <button className='menu-btn-exames'>
+          <span>⋮</span>
+        </button>
+      </header>
+
+      {/* Stats Card */}
+      <div className='stats-card-exames'>
+        <div className='stat-item-exames'>
+          <span className='stat-icon-exames'>🔬</span>
+          <div className='stat-info-exames'>
+            <p className='stat-label-exames'>Total</p>
+            <p className='stat-value-exames'>{exames.length}</p>
+          </div>
         </div>
-
-        <h2 id='consultasPendentesEX'>Exames Submetidos</h2>
-
-        <div className='threeDotsdivOperationsEX'>
-          <Link to={'/Settings'}>
-            <img src={threeDots} alt='Opções' />
-          </Link>
+        <div className='stat-divider-exames'></div>
+        <div className='stat-item-exames'>
+          <span className='stat-icon-exames'>⏳</span>
+          <div className='stat-info-exames'>
+            <p className='stat-label-exames'>Pendentes</p>
+            <p className='stat-value-exames pending-color'>{pendentesCount}</p>
+          </div>
+        </div>
+        <div className='stat-divider-exames'></div>
+        <div className='stat-item-exames'>
+          <span className='stat-icon-exames'>✅</span>
+          <div className='stat-info-exames'>
+            <p className='stat-label-exames'>Validados</p>
+            <p className='stat-value-exames success-color'>{validadosCount}</p>
+          </div>
         </div>
       </div>
 
-      <div>
+      {/* Filter Tabs */}
+      <div className='filter-tabs-exames'>
+        <button
+          className={`filter-tab-exames ${filter === 'todos' ? 'active' : ''}`}
+          onClick={() => setFilter('todos')}
+        >
+          Todos
+        </button>
+        <button
+          className={`filter-tab-exames ${filter === 'pendentes' ? 'active' : ''}`}
+          onClick={() => setFilter('pendentes')}
+        >
+          Pendentes
+        </button>
+        <button
+          className={`filter-tab-exames ${filter === 'validados' ? 'active' : ''}`}
+          onClick={() => setFilter('validados')}
+        >
+          Validados
+        </button>
+      </div>
+
+      {/* Content */}
+      <div className='exames-content'>
         {loading ? (
-          <Loading text="A carregar Exames..." />
+          <div className='loading-state-exames'>
+            <div className='loader-spinner-exames'></div>
+            <p className='loading-text-exames'>A carregar exames...</p>
+          </div>
         ) : erro ? (
-          <p>{erro}</p>
-        ) : exames.length === 0 ? (
-          <p>⚠️ Nenhum exame encontrado</p>
+          <div className='error-state-exames'>
+            <span className='error-icon-exames'>⚠️</span>
+            <p className='error-text-exames'>{erro}</p>
+            <button className='retry-btn-exames' onClick={() => window.location.reload()}>
+              Tentar Novamente
+            </button>
+          </div>
+        ) : filteredExames.length === 0 ? (
+          <div className='empty-state-exames'>
+            <span className='empty-icon-exames'>🔬</span>
+            <h3 className='empty-title-exames'>Nenhum exame encontrado</h3>
+            <p className='empty-text-exames'>
+              {filter === 'todos' 
+                ? 'Ainda não tens exames registados no sistema.'
+                : filter === 'pendentes'
+                ? 'Não tens exames pendentes no momento.'
+                : 'Não tens exames validados no momento.'}
+            </p>
+            <Link to='/AnaliseImagens' className='cta-btn-exames'>
+              <span>🩺</span>
+              Submeter Novo Exame
+            </Link>
+          </div>
         ) : (
-          <div className='activeListPP'>
-            {exames.map((exame, index) => (
-              <div key={exame.id || index}>
-                <div className='activeItemdivOperationsEX'>
-                  <div
-                    className={
-                      index % 2 === 0
-                        ? 'activeLogoDivOperationsSaque'
-                        : 'activeLogoDivOperationsDeposito'
-                    }
-                  >
-                    <h2 id='activeLogoOperationsEX'>E</h2>
-                  </div>
-
-                  <div className='interventionDivEX'>
-                    <Link to={`/ViewExam/${exame.id}`} className='Link'> <h3 id='activeNameOperationsEX'>{`Exame ${index + 1}`}</h3></Link>
-
-                    <div className='horarioDivEX'>
-                      <h5 id='dataConsultaEX'>{exame.dataExame}</h5>
-
-                      <div
-                        id='estadoEX'
-                        style={{
-                          backgroundColor:
-                            exame.requestStatus === 'Pendente'
-                              ? '#F3D37C'
-                              : exame.requestStatus === 'Validado'
-                              ? '#A9D680'
-                              : 'transparent',
-                          border: `2px solid ${
-                            exame.requestStatus === 'Pendente'
-                              ? '#DEBE69'
-                              : exame.requestStatus === 'Validado'
-                              ? '#A9D680'
-                              : 'transparent'
-                          }`,
-                        }}
-                      >
-                        <h5>{exame.requestStatus || 'Pendente'}</h5>
-                      </div>
-                    </div>
+          <div className='exames-list'>
+            {filteredExames.map((exame, index) => (
+              <Link
+                to={`/ViewExam/${exame.id}`}
+                key={exame.id || index}
+                className='exame-card'
+              >
+                <div className='exame-icon-wrapper'>
+                  <div className={`exame-icon ${index % 2 === 0 ? 'blue' : 'pink'}`}>
+                    <span>🔬</span>
                   </div>
                 </div>
-                <div className='bordaOperationsEX'></div>
-              </div>
+
+                <div className='exame-details'>
+                  <h3 className='exame-title'>Exame Mamográfico {index + 1}</h3>
+
+                  <div className='exame-info-grid'>
+                    <div className='info-item-exame'>
+                      <span className='info-icon-exame'>📅</span>
+                      <span className='info-text-exame'>
+                        {new Date(exame.dataExame).toLocaleDateString('pt-PT')}
+                      </span>
+                    </div>
+
+                    <div className={`status-badge-exame ${
+                      exame.requestStatus === 'Pendente' ? 'pending' : 'validated'
+                    }`}>
+                      <span className='status-icon-exame'>
+                        {exame.requestStatus === 'Pendente' ? '⏳' : '✅'}
+                      </span>
+                      <span>{exame.requestStatus || 'Pendente'}</span>
+                    </div>
+                  </div>
+
+                  {exame.prediction && (
+                    <div className={`prediction-badge ${
+                      exame.prediction === 'malignant' ? 'malignant' : 'benign'
+                    }`}>
+                      <span className='prediction-icon'>
+                        {exame.prediction === 'malignant' ? '⚠️' : '✓'}
+                      </span>
+                      <span className='prediction-text'>
+                        {exame.prediction === 'malignant' ? 'Maligno' : 'Benigno'}
+                      </span>
+                      {exame.confidence && (
+                        <span className='confidence-text'>
+                          ({Math.round(exame.confidence * 100)}%)
+                        </span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                <div className='exame-arrow'>
+                  <span>›</span>
+                </div>
+              </Link>
             ))}
           </div>
         )}
       </div>
+
+      {/* Footer */}
+      {!loading && !erro && filteredExames.length > 0 && (
+        <div className='exames-footer'>
+          <p className='footer-info-exames'>
+            Exibindo {filteredExames.length} de {exames.length} exames
+          </p>
+        </div>
+      )}
     </div>
   );
 }
