@@ -10,7 +10,7 @@ function PedidosPendentes() {
   const [erro, setErro] = useState('');
   const [pedidos, setPedidos] = useState([]);
   const [filter, setFilter] = useState('todos'); // 'todos', 'pendentes', 'validados'
-  const api = 'http://192.168.1.7:3000';
+  const api = 'http://192.168.1.3:3000';
 
   useEffect(() => {
     const fetchPedido = async () => {
@@ -54,9 +54,12 @@ function PedidosPendentes() {
 
         <h1 className='page-title-pedidos'>Minhas Marcações</h1>
 
-        <button className='menu-btn-pedidos'>
-          <span>⋮</span>
-        </button>
+        <Link to='/Settings' className='back-btn-pedidos'>
+          <button className='menu-btn-pedidos'>
+            <span>⋮</span>
+          </button>
+        </Link>
+
       </header>
 
       {/* Stats Card */}

@@ -20,7 +20,7 @@ function ViewPedido() {
 
   const { user } = useAuth();
   const navigate = useNavigate();
-  const api = 'http://192.168.1.7:3000';
+  const api = 'http://192.168.1.3:3000';
 
   useEffect(() => {
     const fetchPedido = async () => {
@@ -109,10 +109,12 @@ function ViewPedido() {
         </Link>
 
         <h1 className="page-title-view">Detalhes da Marcação</h1>
-
+        
+        <Link to='/Settings' className='back-btn-consultas'>
         <button className="menu-btn-view">
           <span>⋮</span>
         </button>
+        </Link>
       </header>
 
       {loading ? (

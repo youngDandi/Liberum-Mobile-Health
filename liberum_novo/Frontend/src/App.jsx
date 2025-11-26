@@ -32,7 +32,7 @@ function App() {
       <Router>
       <AuthProvider>
         <Routes>
-          <Route path='/' element={<Login />}/>
+          <Route path='/' element={<Landing />}/>
         
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/InvestorForm' element={<InvestorForm />} />
@@ -51,6 +51,7 @@ function App() {
           <Route path='/PedidosPendentes' element={<PedidosPendentes/>} />
           <Route path='/ViewPedido/:id' element={<ViewPedido/>} />
           <Route path='/Exames' element={<Exames/>} />
+          <Route path='/Login' element={<Login/>} />
           <Route path='/ViewExam/:id' element={<ViewExam/>} />
         </Routes>
       </AuthProvider>  

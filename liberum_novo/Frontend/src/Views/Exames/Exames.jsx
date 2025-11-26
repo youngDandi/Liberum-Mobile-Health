@@ -10,7 +10,7 @@ function Exames() {
   const [exames, setExames] = useState([]);
   const [erro, setErro] = useState('');
   const [filter, setFilter] = useState('todos'); // 'todos', 'pendentes', 'validados'
-  const api = 'http://192.168.1.7:3000';
+  const api = 'http://192.168.1.3:3000';
 
   useEffect(() => {
     const fetchExames = async () => {
@@ -57,10 +57,11 @@ function Exames() {
         </Link>
 
         <h1 className='page-title-exames'>Meus Exames</h1>
-
+        <Link to='/Settings' className='back-btn-consultas'>
         <button className='menu-btn-exames'>
           <span>⋮</span>
         </button>
+        </Link>
       </header>
 
       {/* Stats Card */}

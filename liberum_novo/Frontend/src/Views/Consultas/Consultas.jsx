@@ -69,9 +69,12 @@ function Consultas() {
         
         <h1 className='page-title-consultas'>Histórico de Consultas</h1>
 
+
+        <Link to='/Settings' className='back-btn-consultas'>
         <button className='menu-btn-consultas'>
           <span>⋮</span>
         </button>
+        </Link>
       </header>
 
       {/* Stats Card */}

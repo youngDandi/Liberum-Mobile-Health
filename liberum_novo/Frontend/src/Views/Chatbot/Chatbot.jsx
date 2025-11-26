@@ -110,10 +110,12 @@ function ChatBot() {
             </p>
           </div>
         </div>
+        <Link to='/Settings' className='back-btn-consultas'>
+          <button className="menu-btn">
+            <span>⋮</span>
+          </button>
+        </Link>
 
-        <button className="menu-btn">
-          <span>⋮</span>
-        </button>
       </header>
 
       {/* Messages Area */}
